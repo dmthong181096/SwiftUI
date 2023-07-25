@@ -22,18 +22,21 @@ struct FeatureView: View {
         "Calming sounds"
     ]
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text("Feature")
                 .foregroundStyle(colorTextWhite)
-                .font(.footnote)
+                .font(.largeTitle)
                 .fontWeight(.semibold)
-                .padding()
+                .padding(.horizontal)
             
-            LazyVGrid(columns: colums, spacing: 20, content: {
-                ForEach(featureList) { feature in
-                    FeatureItemView(featureItem: feature)
-                }
-            })
+            ScrollView {
+                LazyVGrid(columns: colums, spacing: 20, content: {
+                    ForEach(featureList) { feature in
+                        FeatureItemView(featureItem: feature)
+                    }
+                })
+            }
+ 
 
         }
     }

@@ -18,7 +18,7 @@ struct HomeScreenView: View {
         ZStack {
             colorDeepBlue.ignoresSafeArea()
             
-            VStack {
+            VStack(spacing: 0) {
                 GreetingsView(name: "Thong")
                 .font(.largeTitle)
                 ChipsView(chips: chips)

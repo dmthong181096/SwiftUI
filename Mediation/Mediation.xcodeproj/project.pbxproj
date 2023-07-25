@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F09B6C02A700BFF00A68AD8 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F09B6BF2A700BFF00A68AD8 /* MainTabView.swift */; };
+		6F09B6C22A700C2700A68AD8 /* MeditateScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F09B6C12A700C2700A68AD8 /* MeditateScreenView.swift */; };
+		6F09B6C42A700C7400A68AD8 /* SleepScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F09B6C32A700C7400A68AD8 /* SleepScreenView.swift */; };
+		6F09B6C62A700CA500A68AD8 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F09B6C52A700CA500A68AD8 /* MusicView.swift */; };
+		6F09B6C82A700CC800A68AD8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F09B6C72A700CC800A68AD8 /* ProfileView.swift */; };
 		6F23CE7C2A6F4FE400B39EB9 /* FeatureItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F23CE7B2A6F4FE400B39EB9 /* FeatureItemView.swift */; };
 		6F23CE7F2A6F524200B39EB9 /* FeatureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F23CE7E2A6F524200B39EB9 /* FeatureModel.swift */; };
 		6F28D6FE2A6D567300B00746 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F28D6FD2A6D567300B00746 /* Contants.swift */; };
@@ -22,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F09B6BF2A700BFF00A68AD8 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		6F09B6C12A700C2700A68AD8 /* MeditateScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditateScreenView.swift; sourceTree = "<group>"; };
+		6F09B6C32A700C7400A68AD8 /* SleepScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepScreenView.swift; sourceTree = "<group>"; };
+		6F09B6C52A700CA500A68AD8 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
+		6F09B6C72A700CC800A68AD8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		6F23CE7B2A6F4FE400B39EB9 /* FeatureItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureItemView.swift; sourceTree = "<group>"; };
 		6F23CE7E2A6F524200B39EB9 /* FeatureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureModel.swift; sourceTree = "<group>"; };
 		6F28D6FD2A6D567300B00746 /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
@@ -73,6 +83,10 @@
 				6F28D7042A6D669F00B00746 /* CurrentMeditationView.swift */,
 				6F28D7062A6DFA6500B00746 /* FeatureView.swift */,
 				6F23CE7B2A6F4FE400B39EB9 /* FeatureItemView.swift */,
+				6F09B6BF2A700BFF00A68AD8 /* MainTabView.swift */,
+				6F09B6C12A700C2700A68AD8 /* MeditateScreenView.swift */,
+				6F09B6C52A700CA500A68AD8 /* MusicView.swift */,
+				6F09B6C72A700CC800A68AD8 /* ProfileView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -121,6 +135,7 @@
 			children = (
 				6F28D6FF2A6D584F00B00746 /* Components */,
 				6F72CB282A6D55AB00DEFFEF /* HomeScreenView.swift */,
+				6F09B6C32A700C7400A68AD8 /* SleepScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,10 +211,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F23CE7C2A6F4FE400B39EB9 /* FeatureItemView.swift in Sources */,
+				6F09B6C22A700C2700A68AD8 /* MeditateScreenView.swift in Sources */,
 				6F28D7072A6DFA6500B00746 /* FeatureView.swift in Sources */,
 				6F23CE7F2A6F524200B39EB9 /* FeatureModel.swift in Sources */,
+				6F09B6C62A700CA500A68AD8 /* MusicView.swift in Sources */,
 				6F28D7032A6D5FC100B00746 /* ChipsView.swift in Sources */,
 				6F72CB292A6D55AB00DEFFEF /* HomeScreenView.swift in Sources */,
+				6F09B6C82A700CC800A68AD8 /* ProfileView.swift in Sources */,
+				6F09B6C42A700C7400A68AD8 /* SleepScreenView.swift in Sources */,
+				6F09B6C02A700BFF00A68AD8 /* MainTabView.swift in Sources */,
 				6F72CB1B2A6D556500DEFFEF /* ContentView.swift in Sources */,
 				6F28D7012A6D585E00B00746 /* GreetingsView.swift in Sources */,
 				6F72CB192A6D556500DEFFEF /* MediationApp.swift in Sources */,
