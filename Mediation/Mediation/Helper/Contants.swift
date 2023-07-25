@@ -26,3 +26,30 @@ let colorOrangeYellow1 = Color("OrangeYellow1")
 let colorOrangeYellow2 = Color("OrangeYellow2")
 let colorOrangeYellow3 = Color("OrangeYellow3")
 let colorTextWhite = Color("TextWhite")
+
+let featureList = [
+    FeatureModel(
+        lightColor: colorBlueViolet1,
+        mediumColor: colorBlueViolet2,
+        darkColor: colorBlueViolet3,
+        title: "Sleep meditation",
+        iconName: "music.note"),
+    FeatureModel(
+        lightColor: colorLightGreen1,
+        mediumColor: colorLightGreen2,
+        darkColor: colorLightGreen3,
+        title: "Tips for sleeping",
+        iconName: "video"),
+    FeatureModel(
+        lightColor: colorOrangeYellow1,
+        mediumColor: colorOrangeYellow2,
+        darkColor: colorOrangeYellow3,
+        title: "Night island",
+        iconName: "leaf"),
+    FeatureModel(
+        lightColor: colorBeige1,
+        mediumColor: colorBeige2,
+        darkColor: colorBeige3,
+        title: "Calming sounds",
+        iconName: "heart"),
+]
