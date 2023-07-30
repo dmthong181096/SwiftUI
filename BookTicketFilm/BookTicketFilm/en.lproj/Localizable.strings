@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  BookTicketFilm
+
+  Created by FE-Thong on 29/07/2023.
+  
+*/
+
+"Chọn phim" = "Choose Film" ;
+"Chọn rạp" = "Choose Theater" ;
+"Bắp nước" = "Combo" ;
+"Tôi" = "Me";
+"Vé đã mua" = "Purchased";
+"Phim đã xem" = "Watched";
+"Đánh giá" = "Rate";
+"Bình luận" = "Comment";
+
+
