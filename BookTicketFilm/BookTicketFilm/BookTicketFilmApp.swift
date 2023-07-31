@@ -11,7 +11,7 @@ import SwiftUI
 struct BookTicketFilmApp: App {
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+            FoodScreenView(theater: "CGV Bình tân", date: "")
         }
     }
 }

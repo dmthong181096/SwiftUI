@@ -24,5 +24,13 @@ let DATA_ITEM_INFO: [ItemInfoModel] = [
 ]
 let WIDTH_SCREEN = UIScreen.main.bounds.width
 let HEIGHT_SCREEN = UIScreen.main.bounds.height
+let CORNER_RADIUS = 10.0
+ 
+//let image
+let IMG_BORN = "imgBorn"
+
+//Text
+let HEADER_FOOD = "Mùi gì mà thơm thơm thế?"
+let CAPTION_FOOD = "Nhớ vị bắp? Đặt ngay trên MoMo rẻ hơn tại rạp á"
 
 
