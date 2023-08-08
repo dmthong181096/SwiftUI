@@ -18,10 +18,10 @@ struct MainTabView: View {
                 .tabItem {
                     Label("Chọn rạp", systemImage: "play.tv")
                 }
-//            FoodScreenView()
-//                .tabItem {
-//                    Label("Bắp nước", systemImage: "popcorn")
-//                }
+            FoodScreenView(theater: "", date: "")
+                .tabItem {
+                    Label("Bắp nước", systemImage: "popcorn")
+                }
             InfoScreenView()
                 .tabItem {
                     Label("Tôi", systemImage: "person")

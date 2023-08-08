@@ -11,6 +11,124 @@ struct FoodScreenView: View {
     @State var theater: String
     @State var date: String
     @State var shouldPresentSheet = false
+    @State var foodItemToAdd : ItemFoodModel = .DefaultItemFood()
+    let dataFoodItems: [ItemFoodModel] = [
+        ItemFoodModel(
+            name: "MY COMBO",
+            image: "compo",
+            description: """
+            1 bắp lớn + nước siêu lớn
+            Nhận trong ngày xem film*
+            *Miễn phí đổi sang vị bắp Caramel*
+            **Đổi vị phô mai phụ thu thêm tiền**
+            """,
+            price: 87000,
+            isBestSeller: false),
+        ItemFoodModel(
+            name: "MISSION IMPOSSIBLE COMBO 2023",
+            image: "compo",
+            description: """
+            1 bình Mission Impossible +
+            1 nước ngọt siêu lớn + 1 bắp
+            ngọt lớn
+            Nhận trong ngày xem film*
+            *Miễn phí đổi sang vị bắp Caramel*
+            **Mẫu bình nước có thể do được nhiệt độ nước**
+            """,
+            price: 299000,
+            isBestSeller: false),
+        ItemFoodModel(
+            name: "FASHION COMBO",
+            image: "compo",
+            description: """
+            2 nước siêu lớn + 1 bắp ngọt
+            lớn + 1 Premium Snack (chả
+            giò, kitkat, hoặc bánh que)
+            *Tích luỹ 2 combo nhận
+            Fashion Bag
+            **Số lượng Fashion Bag có
+            gới hạn
+            ***Quà bắt đầu nhận từ
+            ngày 20/07/2023
+            ****Bắp nước nhận ngay trong ngày mua
+            """,
+            price: 129000,
+            isBestSeller: false),
+        ItemFoodModel(
+            name: "BABY SHARK FAMILY",
+            image: "compo",
+            description: """
+            3 ly Baby Shark + 3 nước
+            siêu lớn
+            *Mua thêm một bắp ngọt
+            lớn chỉ 29k
+            **Nhận trong ngày xem phim
+            ***Mẫu ly phụ thuộc vào số lượng từng rạp
+            """,
+            price: 490000,
+            isBestSeller: false),
+        ItemFoodModel(
+            name: "BABY SHARK COUPLE COMBO",
+            image: "compo",
+            description: """
+            2 ly Baby Shark + 2 nước
+            siêu lớn
+            *Mua thêm một bắp ngọt
+            lớn chỉ 29k
+            **Nhận trong ngày xem phim
+            ***Mẫu ly phụ thuộc vào số lượng từng rạp
+            """,
+            price: 362000,
+            isBestSeller: false),
+        ItemFoodModel(
+            name: "BABY SHARK SINGLE COMBO",
+            image: "compo",
+            description: """
+            1 ly Baby Shark + 1 nước
+            siêu lớn
+            *Mua thêm một bắp ngọt
+            lớn chỉ 29k
+            **Nhận trong ngày xem phim
+            ***Mẫu ly phụ thuộc vào số lượng từng rạp
+            """,
+            price: 362000,
+            isBestSeller: false),
+        ItemFoodModel(
+            name: "JUNGLE BROWN MY COMBO",
+            image: "compo",
+            description: """
+            1 bình Jungle Brown + 1 nước
+            siêu lớn
+            *Mua thêm một bắp ngọt
+            lớn chỉ 29k
+            **Nhận trong ngày xem phim
+            ***Mẫu ly phụ thuộc vào số lượng từng rạp
+            """,
+            price: 254000,
+            isBestSeller: false),
+        ItemFoodModel(
+            name: "JUNGLE BROWN COUPLE COMBO",
+            image: "compo",
+            description: """
+            2 bình Jungle Brown + 2 nước
+            siêu lớn + 1 bắp ngọt lớn
+            **Nhận trong ngày xem phim
+            ***Mẫu ly phụ thuộc vào số lượng từng rạp
+            """,
+            price: 490000,
+            isBestSeller: false),
+        ItemFoodModel(
+            name: "CGV COMBO",
+            image: "compo",
+            description: """
+            2 Bắp lớn + 2 nước siêu lớn
+            *Miễn phí đổi sang vị bắp Caramel*
+            **Đổi vị phô mai phụ thu thêm tiền**
+            """,
+            price: 113000,
+            isBestSeller: false),
+
+    ]
     let layoutGrid = [
         GridItem(),
         GridItem()
@@ -74,23 +192,28 @@ struct FoodScreenView: View {
                     
                     //BODY
                     LazyVGrid(columns: layoutGrid, content: {
-                        Button(action: {
-                            withAnimation(.easeInOut) {
-                                shouldPresentSheet = true
-                            }
-                         
-                           
-                        }, label: {
-                            FoodItemView(foodItem: .DefaultItemFood())
-                           
-                        }).buttonStyle(.plain)
+                        
+                        ForEach(dataFoodItems) { foodItem in
+                            Button(action: {
+                                withAnimation(.easeInOut) {
+                                    shouldPresentSheet = true
+                                    foodItemToAdd = foodItem
+                                }
+                             
+                               
+                            }, label: {
+                                FoodItemView(foodItem: foodItem)
+                               
+                            }).buttonStyle(.plain)
+                        }
+               
                     
                     })
                     
                     
                 }
                 .sheet(isPresented: $shouldPresentSheet, content: {
-                    AddFoodToCartView(foodItem: .DefaultItemFood())
+                    AddFoodToCartView(foodItem: foodItemToAdd)
                 })
 
                 .scrollIndicators(.hidden)
@@ -98,11 +221,6 @@ struct FoodScreenView: View {
                 .navigationTitle("Mua bắp nước")
                 .navigationBarTitleDisplayMode(.inline)
             }
-//            if shouldPresentSheet {
-//                    AddFoodToCartView(foodItem: .DefaultItemFood(), isAnim: $shouldPresentSheet)
-//                            .frame(height: HEIGHT_SCREEN/1.5)
-//                
-//            }
     
         }
     }

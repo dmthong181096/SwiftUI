@@ -32,7 +32,7 @@ struct ItemFoodModel: Identifiable {
     
     static func DefaultItemFood() -> ItemFoodModel {
         ItemFoodModel(
-            name: "MY COMBO",
+            name: "MISSION IMPOSSIBLE COMBO 2023",
             image: "compo",
             description: """
             1 bắp lớn + nước siêu lớn
