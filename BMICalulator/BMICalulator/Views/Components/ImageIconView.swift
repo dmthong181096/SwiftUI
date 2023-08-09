@@ -12,7 +12,7 @@ struct ImageIconView: View {
     let size: CGFloat
     var body: some View {
         Image(systemName: imageName)
-            .resizable()
+//            .resizable()
             .frame(width: size, height: size, alignment: .center)
             .padding(10)
             .background(
