@@ -11,7 +11,7 @@ import SwiftUI
 struct BMICalulatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreen(height: 170, weight: 70, age: 35)
         }
     }
 }

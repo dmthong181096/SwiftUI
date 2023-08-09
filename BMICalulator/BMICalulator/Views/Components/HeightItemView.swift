@@ -12,7 +12,7 @@ struct HeightItemView: View {
     let width: CGFloat
     let height: CGFloat
 
-    @State var value = 50.0
+    @Binding var value: Double
     let isUseSlider: Bool
     let rangeMax: Double
     let rangeMin: Double
@@ -68,6 +68,6 @@ struct HeightItemView: View {
 #Preview {
     ZStack {
         colorWhite
-        HeightItemView(textTitle: "Height", width: WIDTH_SCREEN/2, height: 200 ,value: 170.0, isUseSlider: true ,rangeMax: 200, rangeMin: 0)
+        HeightItemView(textTitle: "Height", width: WIDTH_SCREEN/2, height: 200 ,value: .constant(170.0), isUseSlider: true ,rangeMax: 200, rangeMin: 0)
     }
 }
