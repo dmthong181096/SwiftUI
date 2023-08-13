@@ -11,7 +11,7 @@ struct ResultScreen: View {
     let result: ResultModel
     let progress = 0.33
     let ringDiameter = 300.0
-    
+    @Environment(\.dismiss) private var dismiss
     private var rotationAngle: Angle {
         return Angle(degrees: (360.0 * progress))
     }
@@ -21,7 +21,14 @@ struct ResultScreen: View {
             VStack {
                 //MARK: - HEADER
                 HStack(content: {
-                    ImageIconView(imageName: imgChevron, size: 20)
+                    Button {
+                        dismiss()
+                    } label: {
+                        ImageIconView(imageName: imgChevron, size: 20)
+                    }
+                    .buttonStyle(.plain)
+
+                  
                     Spacer()
                     Text("Your BMI")
                         .font(.title)
@@ -76,5 +83,5 @@ struct ResultScreen: View {
 }
 
 #Preview {
-    ResultScreen(result: ResultModel(height: 175, weight: 70))
+    ResultScreen(result: ResultModel(height: 175, weight: 70, ace: 35))
 }

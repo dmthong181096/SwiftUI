@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F0BC7E82A88D03E00D8B8D5 /* InfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0BC7E72A88D03E00D8B8D5 /* InfoScreen.swift */; };
 		6F0FCC8E2A81C3DB00537159 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F0FCC902A81C3DB00537159 /* Localizable.strings */; };
 		6F0FCC922A81C4CA00537159 /* ImageIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FCC912A81C4CA00537159 /* ImageIconView.swift */; };
 		6F0FCC942A81C52100537159 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0FCC932A81C52100537159 /* Config.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F0BC7E72A88D03E00D8B8D5 /* InfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreen.swift; sourceTree = "<group>"; };
 		6F0FCC8F2A81C3DB00537159 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6F0FCC912A81C4CA00537159 /* ImageIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIconView.swift; sourceTree = "<group>"; };
 		6F0FCC932A81C52100537159 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			children = (
 				6F420E7E2A81C28400EAFFA5 /* HomeScreen.swift */,
 				6F420E802A81C2A700EAFFA5 /* ResultScreen.swift */,
+				6F0BC7E72A88D03E00D8B8D5 /* InfoScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F420E812A81C2A700EAFFA5 /* ResultScreen.swift in Sources */,
+				6F0BC7E82A88D03E00D8B8D5 /* InfoScreen.swift in Sources */,
 				6FF882D92A827F4E00135B17 /* RoundedRectangleItemView.swift in Sources */,
 				6F420E672A81BFFB00EAFFA5 /* ContentView.swift in Sources */,
 				6F420E652A81BFFB00EAFFA5 /* BMICalulatorApp.swift in Sources */,

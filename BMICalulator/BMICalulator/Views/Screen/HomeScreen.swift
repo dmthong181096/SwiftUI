@@ -11,6 +11,8 @@ struct HomeScreen: View {
     @State var height: Double
     @State var weight: Double
     @State var age: Double
+    @State var isShowInfoScreen: Bool = false
+   
     var body: some View {
         NavigationStack {
             ZStack {
@@ -24,9 +26,13 @@ struct HomeScreen: View {
                             .font(.title)
                             .foregroundStyle(colorGray)
                         Spacer()
-                        ImageIconView(imageName: imgPerson, size: 20)
-                      
+                        Button {
+                            isShowInfoScreen = true
+                        } label: {
+                            ImageIconView(imageName: imgInfo, size: 20)
+                        }
                     })
+                    .buttonStyle(.plain)
                     Spacer()
                     //MARK: - BODY
                     VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 30, content: {
@@ -75,18 +81,8 @@ struct HomeScreen: View {
                     
                     
                     //MARK: - FOOTER
-                    Button(action: {
-    //                    print("CLICK"
-                                                print("hei",height)
-                                                print("wei", weight)
-
-                    }, label: {
-                        ButtonView(text: "CALCULATE11")
-                    })
                     NavigationLink {
-//                        print("hei",height)
-//                        print("wei", weight)
-                        ResultScreen(result: ResultModel(height: Int(70), weight: Int(170)))
+                        ResultScreen(result: ResultModel(height: Int(height), weight: Int(weight), ace: Int(age)))
                             .navigationBarBackButtonHidden(true)
                     } label: {
                         ButtonView(text: "CALCULATE")
@@ -94,6 +90,13 @@ struct HomeScreen: View {
                 }
                 .frame(width: WIDTH_SCREEN/1.1, alignment: .center)
             }
+            .sheet(isPresented: $isShowInfoScreen, content: {
+                InfoScreen()
+                    .presentationDetents([.large])
+                    .presentationDragIndicator(.visible)
+            })
+    
+            
         }
     }
 }

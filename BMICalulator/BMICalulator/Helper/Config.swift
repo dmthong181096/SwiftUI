@@ -17,7 +17,7 @@ let colorGray = Color("colorGray");
 let imgTextAlignLeft = "text.alignleft"
 let imgPerson = "person"
 let imgChevron = "chevron.backward"
-
+let imgInfo = "info"
 //SIZE
 //let WIDTH_SCREEN = UIScreen().bounds.size.width
 let WIDTH_SCREEN = UIScreen.main.bounds.width
@@ -26,3 +26,5 @@ let WIDTH_SCREEN = UIScreen.main.bounds.width
 let arrString = [
     "Your"
 ]
+//URL
+let urlInfo  = URL(string: "https://www.vinmec.com/vi/tin-tuc/thong-tin-suc-khoe/cach-do-va-tinh-chi-so-bmi-theo-huong-dan-cua-vien-dinh-duong-quoc-gia/")

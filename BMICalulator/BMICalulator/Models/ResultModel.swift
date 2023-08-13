@@ -11,6 +11,7 @@ struct ResultModel: Identifiable {
     var id = UUID()
     var height: Int
     var weight: Int
+    var ace: Int
     var BMI: Double {
         let height2 = (height * height) / 10000
         let BMI = weight / height2
